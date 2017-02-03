@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+- name: windows-2012R2
+  driver_config:
+    box: windows2012r2min-wmf5-virtualbox
+
+suites:
+  - name: default
+    run_list:
+    attributes:
