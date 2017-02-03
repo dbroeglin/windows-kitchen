@@ -9,4 +9,6 @@ group :development do
   gem "vagrant-wrapper"
   gem "winrm"
   gem "winrm-fs"
+
+  gem 'kitchen-pester'
 end

@@ -3,14 +3,18 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
 
 platforms:
 - name: windows-2012R2
   driver_config:
     box: windows2012r2min-wmf5-virtualbox
 
+verifier:
+  name: pester
+
 suites:
   - name: default
     run_list:
+      - recipe[forge::default]
     attributes:

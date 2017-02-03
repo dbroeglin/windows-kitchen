@@ -1,0 +1,7 @@
+DEPENDENCIES
+  forge
+    path: .
+    metadata: true
+
+GRAPH
+  forge (0.1.0)
