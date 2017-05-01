@@ -11,4 +11,5 @@ group :development do
   gem "winrm-fs"
 
   gem 'kitchen-pester'
+  gem 'kitchen-hyperv'
 end

@@ -1,14 +1,27 @@
 ---
 driver:
-  name: vagrant
+  name: hyperv
+  parent_vhd_name: packer-hyperv-iso.vhdx
+  parent_vhd_folder: "C:/Sources/packer-templates/output-hyperv-iso/Virtual Hard Disks"
+  vm_switch: Packer
+  memory_startup_bytes: 2GB  
 
 provisioner:
   name: chef_zero
 
+transport:
+  name: winrm
+  username: vagrant
+  password: vagrant
+
+
 platforms:
-- name: windows-2012R2
-  driver_config:
-    box: windows2012r2min-wmf5-virtualbox
+#- name: windows-2012R2
+#  driver_config:
+#    box: windows2012r2min-wmf5
+  - name: windows_nano # Must start with win* or add os_type
+#  driver_config:
+#    box: windows2012r2min-wmf5
 
 verifier:
   name: pester
